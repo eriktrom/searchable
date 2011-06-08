@@ -1,0 +1,3 @@
+<% if form_is('home_page_title') %>
+  $('#home_page_title').html('<%= raw escape_javascript(render 'googles/home_page_title/home_page_title') %>').effect('highlight', {}, 2500);
+<% end -%>

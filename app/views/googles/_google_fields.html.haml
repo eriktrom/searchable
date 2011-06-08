@@ -1,0 +1,6 @@
+= f.input :meta_title, :hint => 'Shown at the top of the browser window and as the link to your site on search engines. The limit is 65 characters.', :input_html => {:class => 'meta_title'}
+- if controller_name == 'googles'
+	= f.input :page_title, :hint => 'Shown as the title of the page. Usually much shorter, this title should contain the most important keywords from the previous title'
+= f.input :meta_desc, :hint => 'This is the description shown within search results regarding your site. When the phrase contains keywords the searcher demanded, those keywords are bold in the description. However, natural language and appeal are most important here. Keyword stuffing is highly un-advisable and anything but the best sounding human description will fail to gain searchers clicks. The limit is 165 characters.', :input_html => {:class => 'meta_desc', :rows => 2}
+= count_chars('meta_title', 65, 50)
+= count_chars('meta_desc', 165, 150)

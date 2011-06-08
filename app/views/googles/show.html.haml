@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Googleable:
+  = @google.googleable_id
+%p
+  %b Googleable type:
+  = @google.googleable_type
+%p
+  %b Meta title:
+  = @google.meta_title
+%p
+  %b Page title:
+  = @google.page_title
+%p
+  %b Meta desc:
+  = @google.meta_desc
+
+= link_to 'Edit', edit_google_path(@google)
+\|
+= link_to 'Back', googles_path

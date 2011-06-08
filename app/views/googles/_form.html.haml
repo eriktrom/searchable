@@ -1,0 +1,6 @@
+= simple_form_for(@google) do |f|
+	= render 'shared/error_messages', :target => @google
+	.inputs
+		= render 'googles/google_fields', :f => f
+	.actions
+		= f.submit 'Update SEO Tag', :disable_with => 'Patience is a Virtue...'
