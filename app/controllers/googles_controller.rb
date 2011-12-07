@@ -1,5 +1,6 @@
 class GooglesController < InheritedResources::Base
   respond_to :html, :js, :only => [:update]
+  cache_sweeper :post_sweeper, :only => [:update]
   
   def edit
     edit!{(render :layout => false and return) if request.xhr?}
